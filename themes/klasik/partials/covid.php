@@ -1,8 +1,8 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <?php
- $data_positif = json_decode(file_get_contents('https://api.kawalcorona.com/positif'), true);
- $data_sembuh = json_decode(file_get_contents('https://api.kawalcorona.com/sembuh'), true);
- $data_meninggal = json_decode(file_get_contents('https://api.kawalcorona.com/meninggal'), true);
+ // $data_positif = json_decode(file_get_contents('https://api.kawalcorona.com/positif'), true);
+ // $data_sembuh = json_decode(file_get_contents('https://api.kawalcorona.com/sembuh'), true);
+ // $data_meninggal = json_decode(file_get_contents('https://api.kawalcorona.com/meninggal'), true);
  $data = json_decode(file_get_contents('https://api.kawalcorona.com/indonesia'), true);
  
  $name = $data[0]['name'];
@@ -26,6 +26,10 @@
 ?>
 
 <style type="text/css">
+	#covid {
+		margin-right: 8px;
+		margin-left: 7px;
+	}
 	#covid .panel {
 		background-color: inherit;
 		margin-bottom: 0px;
@@ -37,11 +41,15 @@
 		background-color: inherit;
 		padding-top: 10px;
 	}
+	#covid .row .panel-heading {
+		height: 40px;
+		padding: 1px;
+	}
 </style>
 
 <?php if (!empty($positif)): ?>
-	<div id="covid" class="box">
-		<div class="panel">
+	<div id="covid">
+<!-- 		<div class="panel">
 			<div class="box-header with-border">
 			  <h3 class="box-title"> 
 			  	<span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">COVID-19 Global</span>
@@ -75,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="panel">
 			<div class="box-header with-border">
 			  <h3 class="box-title"> 

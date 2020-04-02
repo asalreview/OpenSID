@@ -33,7 +33,6 @@
 	</div>
 <?php endif; ?>
 
-<?php $this->load->view(Web_Controller::fallback_default($this->theme, '/partials/covid.php')) ?>
 <?php	$this->load->view(Web_Controller::fallback_default($this->theme, '/partials/feed.php'));?>
 
 <!--

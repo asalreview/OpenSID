@@ -29,7 +29,6 @@
 	</div>
 <?php endif; ?>
 
-<?php $this->load->view($folder_themes."/partials/covid.php") ?>
 <?php $this->load->view($folder_themes."/partials/feed.php") ?>
 
 <!--
